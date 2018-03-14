@@ -1,0 +1,44 @@
+.navbar.navbar-inverse{
+        border-radius: 0px;
+    font-size: 1.2em;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    
+}
+.nav-sidebar{
+    
+    margin:-5px -10px 20px;
+}
+
+.nav-sidebar>li>a{
+    
+    padding:10px 5px 25px;
+
+}
+.main{
+    margin-top:-20px;
+    border-radius: 2px;
+ 
+}
+.divider{
+    border:0.5px solid lightgray;
+    margin-bottom:20px;
+     
+}
+.placeholder{
+    margin-bottom:30px;
+}
+.placeholder img{
+    display:inline;
+    border-radius:10%;
+    
+}
+.space{
+    height:200px;
+    
+}
+.footer {
+    padding-top:20px;
+    text-align:center;
+}
