@@ -1,0 +1,91 @@
+body{
+    font-family: 'Exo 2', sans-serif;
+}
+
+
+li.active{
+    
+     font-weight: 600;
+}
+.nav-sidebar{
+    margin: 150px -20px 20px 5px;
+}
+
+.nav-sidebar >li >a{
+    padding: 10px 5px;
+}
+.main{
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.placeholders{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.placeholder{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.placeholder img{
+    display: inline;
+    border-radius: 50%;
+}
+
+
+a.icon{
+    
+    display:none;
+}
+
+
+@media screen and (max-width: 600px)
+{
+    .sidebar ul{
+     
+       display:none;
+       
+        
+    }  
+    .nav-sidebar{
+        margin: 5px 0 5px 0;
+        
+    }
+
+    a.icon{
+
+        display:block;
+        margin-top:80px;
+        font-size:18px;
+        font-weight: 600;
+       
+
+    }
+    .main{
+    margin-top: 5px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

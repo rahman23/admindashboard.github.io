@@ -5,27 +5,36 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
+        <title>Your Own Admin</title>
 
-
-
-
-
-        <title>Admin Dashboard</title>
-
-        <!--  -->
+        <link rel="stylesheet" href="css/adminStyle.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
 
 
     </head>
 
     <body>
+        <script>
 
-        <!--- navbar starts here-->
-        <nav class="navbar navbar-inverse">
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+    if (x.style.display == 'none') {
+                $(".sidebar ul").css("display", "inline");
+                $(".sidebar ul").css("font", "12px");
+            }
+                else{
+                    
+                    $(".sidebar ul").css("display", "none");
+                
+                    
+                }
+            }
+        </script>
+        <!--	navbar starts here-->
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -35,160 +44,161 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><i class="fas fa-chart-line"></i>  <b>Admin Dashboard</b></a>
+                    <a class="navbar-brand" href="#">Admin dashboard</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i>  Dashboard <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#"><i class="fas fa-cog"></i>  Settings</a></li>
-                        <li><a href="#"><i class="fas fa-users"></i>  Profile</a></li>
-                        <li><a href="#"><i class="fas fa-question-circle"></i>   Help</a></li>
+                        <li class="active"><a href="#"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>
+                            Settings</a></li>
+                        <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i>
+                            Profile</a></li>
+                        <li><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i>
+                            Help</a></li>
 
                     </ul>
-                    <!-- <form class="navbar-form navbar-right">
-<div class="form-group">
-<input type="text" class="form-control" placeholder="Search">
-</div>
-<button type="submit" class="btn btn-default">Submit</button>
-</form>-->
+
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><i class="fas fa-plus"></i>  Add User</a></li>
-                        <li><a href="#"><i class="far fa-folder-open"></i>  Add Categories</a></li>
+                        <li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>
+                            Add Users</a></li>
+                        <li><a href="#"><i class="fa fa-files-o" aria-hidden="true"></i>
+                            Add Categories</a></li>
 
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
-        <!--- navbar ends here-->
 
-        <!--- container starts here-->
+        <!--    navbar ends here-->
+
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-3 col-md-2">
-                    <ul class="nav nav-sidebar">
-                        <li>
-                            <a href="#">All Reports</a>
-                            <a href="#">Sales Reports</a>
-                            <a href="#">Balanced Score Card</a>
-                        </li>
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;Reports</a>
+                    <ul class="nav nav-sidebar" id="myTopnav">
+                        <li class="active"><a href="#">Sales Reports</a></li>
+                        <li><a href="#">Stats</a></li>
+                        <li><a href="#">Graphs</a></li>
+                        <li><a href="#">Users</a></li>
+                        <li><a href="#">Revenue</a></li>
+                        <li><a href="#">Countries</a></li>
+                        <li><a href="#">Spamers</a></li>
+
                     </ul>
-                    <ul class="nav nav-sidebar">
-                        <li>
-                            <a href="#">All Reports</a>
-                            <a href="#">Sales Reports</a>
-                            <a href="#">Balanced Score Card</a>
-                        </li>
-                    </ul>
+
                 </div>
                 <div class="col-sm-9 col-md-10 main">
-                    <h1 class="text-muted">Welcome to Dashboard</h1><br>
-                    <div class="divider"></div>
-                    <div class="row placeholder">
+                    <h1 class="page-header"><i class="fa fa-tachometer" aria-hidden="true"></i>
+                        Dashboard</h1>
+                    <div class="row placeholders">
                         <div class="col-xs-6 col-sm-3 placeholder">
-                            <img src="image/graph.png" class="img-responsive" width="200" height="200" alt="">
+                            <img src="images/graph.png" class="img-responsive" width="200" height="200" alt="">
                             <h4>Label</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                         <div class="col-xs-6 col-sm-3 placeholder">
-                            <img src="image/graph.png" class="img-responsive" width="200" height="200" alt="">
+                            <img src="images/graph.png" class="img-responsive" width="200" height="200" alt="">
                             <h4>Label</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
-                        <div class="col-xs-6 col-sm-3 placeholder">   <img src="image/graph.png" class="img-responsive" width="200" height="200" alt="">
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <img src="images/graph.png" class="img-responsive" width="200" height="200" alt="">
                             <h4>Label</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
-                        <div class="col-xs-6 col-sm-3 placeholder">   <img src="image/graph.png" class="img-responsive" width="200" height="200" alt="">
+                        <div class="col-xs-6 col-sm-3 placeholder">
+                            <img src="images/graph.png" class="img-responsive" width="200" height="200" alt="">
                             <h4>Label</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></div>
-
-
-                       
-
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        </div>
                     </div>
-                    
-                     <div class="table-responsive">
-                            <h2 class="sub-header">Detailed Result</h2>
-                            <table class="table table-stripped">
-                                <thead>
-                                    <tr>
-                                        <th>ID#</th>
-                                        <th>Detail 1#</th>
-                                        <th>Detail 2#</th>
-                                        <th>Detail 3#</th>
-                                        <th>Detail 4#</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>28320</td>
-                                        <td>John</td>
-                                        <td>UK</td>
-                                        <td>Bournemouth</td>
-                                        <td>1.500€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>28320</td>
-                                        <td>John</td>
-                                        <td>UK</td>
-                                        <td>Bournemouth</td>
-                                        <td>1.500€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>28320</td>
-                                        <td>John</td>
-                                        <td>UK</td>
-                                        <td>Bournemouth</td>
-                                        <td>1.500€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>28320</td>
-                                        <td>John</td>
-                                        <td>UK</td>
-                                        <td>Bournemouth</td>
-                                        <td>1.500€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>28320</td>
-                                        <td>John</td>
-                                        <td>UK</td>
-                                        <td>Bournemouth</td>
-                                        <td>1.500€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>28320</td>
-                                        <td>John</td>
-                                        <td>UK</td>
-                                        <td>Bournemouth</td>
-                                        <td>1.500€</td>
-                                    </tr>
-                                    <tr>
-                                        <td>28320</td>
-                                        <td>John</td>
-                                        <td>UK</td>
-                                        <td>Bournemouth</td>
-                                        <td>1.500€</td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-
-                        </div>
-
+                    <h2 class="sub-header">Detailed Result</h2>
+                    <hr>
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID#</th>
+                                    <th>Detail 1#</th>
+                                    <th>Detail 2#</th>
+                                    <th>Detail 3#</th>
+                                    <th>Detail 4#</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                                <tr>
+                                    <td>234</td>
+                                    <td>John</td>
+                                    <td>Pentesting</td>
+                                    <td>China</td>
+                                    <td>90$</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-
             </div>
         </div>
-        <!--- container ends here-->
 
 
-        <!-- Footer-->
-        <div class="navbar navbar-default navbar-fixed-bottom"><p class="footer">&copy; 2018 Admin Dashboard <a href="#">Terms </a> &middot; <a href="#">Conditions</a></p></div>
-       
-       
-        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
